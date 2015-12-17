@@ -31,7 +31,7 @@ class ViewController: UIViewController {
           var urlContent = NSString(data: data, encoding: NSUTF8StringEncoding) as NSString!
           var urlContentArray = urlContent.componentsSeparatedByString("<span class=\"phrase\">")
           
-          if (urlContentArray.count > 0)
+          if (urlContentArray.count > 1)
           {
             var weatherArray = urlContentArray[1].componentsSeparatedByString("</span>")
             weather = weatherArray[0] as! String
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
             urlError = true;
           }
           
-          print(urlContentArray[1])
+          //print(urlContentArray[1])
         }
         else
         {
